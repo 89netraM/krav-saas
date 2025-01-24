@@ -1,0 +1,7 @@
+.clear-title {
+  margin-inline-start: calc(var(--spacing) * 4);
+}
+
+.title {
+  margin-top: 1rem;
+}

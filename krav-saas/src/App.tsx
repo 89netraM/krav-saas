@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Wallet from "./components/Wallet";
-import RequirementTitle from "./components/RequirementTitle";
+import Dropdowns from "./components/Dropdowns";
 import "./index.css";
+import RequirementTitle from "./components/RequirementTitle";
 
 function App() {
   const [priority, setPriority] = useState(0);
@@ -16,32 +17,9 @@ function App() {
         <h1> Create new ticket </h1>
 
         <RequirementTitle />
-        <div className="flex align items-baseline gap-4">
-          <p> As a </p>
-          <select className="mt-4 p-2 border rounded">
-            <option value="option1">Mouse</option>
-            <option value="option2">Horse</option>
-            <option value="option3">Cow</option>
-          </select>
-        </div>
 
-        <div className="flex align items-baseline gap-4">
-          <p> I want to </p>
-          <select className="mt-4 p-2 border rounded">
-            <option value="option1">Mouse</option>
-            <option value="option2">Horse</option>
-            <option value="option3">Cow</option>
-          </select>
-        </div>
+        <Dropdowns />
 
-        <div className="flex align items-baseline gap-4">
-          <p> In order to </p>
-          <select className="mt-4 p-2 border rounded">
-            <option value="option1">Mouse</option>
-            <option value="option2">Horse</option>
-            <option value="option3">Cow</option>
-          </select>
-        </div>
         <p className="font-bold"> Priority : {priority} </p>
         <div className="flex flex gap-4 mt-4 ">
           <button
