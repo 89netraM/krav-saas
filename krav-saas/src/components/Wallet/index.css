@@ -1,0 +1,22 @@
+.wallet {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ff69b4;
+  animation: glowingBorder 1.5s infinite;
+}
+
+@keyframes glowingBorder {
+  0% {
+    box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+  }
+  50% {
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 25px #ff69b4;
+  }
+  100% {
+    box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+  }
+}

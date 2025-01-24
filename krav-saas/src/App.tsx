@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Wallet from "./components/Wallet";
 import "./index.css";
 
 function App() {
@@ -17,17 +18,23 @@ function App() {
 
   return (
     <>
+      <Wallet />
       <div className="flex flex-col justify-content-center items-center h-100">
         <h1> Requirements SaaS </h1>
 
         <h2>
           Title:
-          <input type="text" className="mt-4 p-2 border rounded" value={title} onChange={onTitleChange} />
+          <input
+            type="text"
+            className="mt-4 p-2 border rounded"
+            value={title}
+            onChange={onTitleChange}
+          />
           <button
             className="clear-title bg-blue-400 text-white font-bold py-2 px-4 rounded hover:bg-blue-500 transition duration-300"
             onClick={onTitleClear}
           >
-              Clear ($1.99)
+            Clear ($1.99)
           </button>
         </h2>
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getWallet, type Wallet } from "../../api/wallet";
 import Spinner from "../Spinner";
+import "./index.css";
 
 function Wallet() {
   const [wallet, setWallet] = useState<Wallet | undefined>(undefined);
@@ -14,9 +15,10 @@ function Wallet() {
   }
 
   return (
-    <div w-50>
-      <p>Wallet: {wallet.freeCredits} free credits</p>
-      <p>{wallet.realCredits} real credits</p>
+    <div w-50 className="wallet">
+      Wallet
+      <p>${wallet.freeCredits} free credits</p>
+      <p>${wallet.realCredits} real credits</p>
     </div>
   );
 }
