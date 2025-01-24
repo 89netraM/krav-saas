@@ -1,5 +1,8 @@
+import { useState } from "react";
 import "./index.css";
 function App() {
+  const [priority, setPriority] = useState(0)
+
   return (
     <>
       <div className="flex flex-col justify-content-center items-center h-screen">
@@ -32,9 +35,11 @@ function App() {
             <option value="option3">Cow</option>
           </select>
         </div>
-        <p className="font-bold"> Priority : 1 </p>
-        <button className="bg-green-400 text-white font-bold py-2 px-4 rounded hover:bg-green-500 transition duration-300"> Reroll (0.19$) </button>
-        <button className="bg-red-400 text-white font-bold py-2 px-4 rounded hover:bg-green-500 transition duration-300"> Boost (0.99$)</button>
+        <p className="font-bold"> Priority : {priority} </p>
+        <div className="flex flex gap-4 mt-4 ">
+          <button onClick={() => (setPriority(Math.round(Math.random() * 10)))} className="bg-green-400 text-white font-bold py-2 px-4 rounded hover:bg-green-500 transition duration-300"> Reroll (0.19$) </button>
+          <button onClick={() => (setPriority(priority + 1))} className="bg-red-400 text-white font-bold py-2 px-4 rounded hover:bg-green-500 transition duration-300"> Boost (0.99$)</button>
+        </div>
       </div>
     </>
   );
