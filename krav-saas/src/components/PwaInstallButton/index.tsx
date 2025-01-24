@@ -4,7 +4,9 @@ import "./index.css";
 
 export default function PwaInstallButton() {
   const [isInstallable, setIsInstallable] = useState(false);
-  awaitInstallable().then(() => setIsInstallable(true));
+  if (/iphone|android/i.test(navigator.userAgent)) {
+    awaitInstallable().then(() => setIsInstallable(true));
+  }
 
   return isInstallable
     ? (
