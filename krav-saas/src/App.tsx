@@ -3,10 +3,13 @@ import Wallet from "./components/Wallet";
 import Dropdowns from "./components/Dropdowns";
 import "./index.css";
 import RequirementTitle from "./components/RequirementTitle";
+import PwaInstallButton from "./components/PwaInstallButton";
+import Spinner from "./components/Spinner";
 import { purchaseBoost, purchaseReroll } from "./api/wallet";
 
 function App() {
   const [priority, setPriority] = useState(0);
+  const [spinneron, setSpinneron] = useState(false);
   return (
     <>
       <Wallet />
@@ -44,7 +47,19 @@ function App() {
             Boost (0.99$)
           </button>
         </div>
+        <div className="flex flex gap-8 mt-4 createbutton">
+          <button
+            onClick={() => setSpinneron(true)}
+            className="text-white font-bold py-2 px-4 rounded hover:bg-green-500 transition duration-300"
+          >
+            {" "}
+            Create (100$)
+          </button>
+        </div>
       </div>
+
+      <PwaInstallButton />
+      {spinneron ? <Spinner /> : null}
     </>
   );
 }
