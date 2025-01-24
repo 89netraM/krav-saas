@@ -20,11 +20,11 @@ function App() {
     <>
       <Wallet />
       <div className="flex flex-col justify-content-center items-center">
-        <img src="..\public\logo-big.png" style={{ height: 205, width: 200 }} />
+        <img src="logo-big.png" style={{ height: 205, width: 200 }} />
       </div>
 
       <div className="flex flex-col justify-content-center items-center h-100">
-        <h1> Requirements SaaS </h1>
+        <h1> Create new ticket </h1>
 
         <h2>
           Title:
