@@ -24,7 +24,7 @@ function App() {
       </div>
 
       <div className="flex flex-col justify-content-center items-center h-100">
-        <h1> Requirement Compass </h1>
+        <h1> Create new ticket </h1>
 
         <h2>
           Title:
