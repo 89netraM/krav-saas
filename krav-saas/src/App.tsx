@@ -5,7 +5,6 @@ import "./index.css";
 import RequirementTitle from "./components/RequirementTitle";
 import PwaInstallButton from "./components/PwaInstallButton";
 import Spinner from "./components/Spinner";
-import { purchaseBoost, purchaseReroll } from "./api/wallet";
 
 function App() {
   const [priority, setPriority] = useState(0);

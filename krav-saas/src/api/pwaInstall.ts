@@ -5,7 +5,6 @@ const installPromise = new Promise<void>(r => installResolve = r);
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
-  console.log('beforeinstallprompt');
   installResolve();
 });
 

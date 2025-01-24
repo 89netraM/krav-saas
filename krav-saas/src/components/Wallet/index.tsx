@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { getWallet, type Wallet } from "../../api/wallet";
 import Spinner from "../Spinner";
 import "./index.css";
