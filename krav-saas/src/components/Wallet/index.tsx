@@ -5,7 +5,10 @@ import "./index.css";
 
 function Wallet() {
   const [wallet, setWallet] = useState<Wallet>();
-  getWallet().then(setWallet);
+
+  useEffect(() => {
+    getWallet().then(setWallet);
+  }, []);
 
   if (!wallet) {
     return <Spinner />;

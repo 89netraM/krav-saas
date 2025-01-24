@@ -28,7 +28,7 @@ function App() {
         <div className="flex flex gap-4 mt-4 ">
           <button
             onClick={() => {
-              // purchaseReroll();
+              purchaseReroll();
               setPriority(Math.round(Math.random() * 10));
             }}
             className="bg-green-400 text-white font-bold py-2 px-4 rounded hover:bg-green-500 transition duration-300"
@@ -38,7 +38,7 @@ function App() {
           </button>
           <button
             onClick={() => {
-              // purchaseBoost();
+              purchaseBoost();
               setPriority(priority + 1);
             }}
             className="bg-red-400 text-white font-bold py-2 px-4 rounded hover:bg-green-500 transition duration-300"
