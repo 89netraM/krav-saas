@@ -15,10 +15,22 @@ function Wallet() {
   }
 
   return (
-    <div w-50 className="wallet">
+    <div className="wallet">
       Wallet
-      <p>${wallet.freeCredits} free credits</p>
-      <p>${wallet.realCredits} real credits</p>
+      <p>
+        {wallet.freeCredits.toLocaleString("en-US", {
+          style: "currency",
+          currency: "USD",
+        })}{" "}
+        free credits
+      </p>
+      <p>
+        {wallet.realCredits.toLocaleString("en-US", {
+          style: "currency",
+          currency: "USD",
+        })}{" "}
+        real credits
+      </p>
     </div>
   );
 }
