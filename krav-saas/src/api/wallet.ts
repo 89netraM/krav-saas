@@ -1,4 +1,4 @@
-interface Wallet {
+export interface Wallet {
   freeCredits: number;
   realCredits: number;
 }

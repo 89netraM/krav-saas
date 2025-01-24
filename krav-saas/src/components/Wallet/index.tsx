@@ -1,9 +1,13 @@
-import { useState } from "react";
-import { getWallet } from "../../api/wallet";
+import { useEffect, useState } from "react";
+import { getWallet, type Wallet } from "../../api/wallet";
 import Spinner from "../Spinner";
 
 function Wallet() {
-  const [wallet] = useState(getWallet());
+  const [wallet, setWallet] = useState<Wallet | undefined>(undefined);
+
+  useEffect(() => {
+    getWallet().then(setWallet);
+  }, []);
 
   if (!wallet) {
     return <Spinner />;
