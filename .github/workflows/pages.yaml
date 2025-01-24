@@ -1,0 +1,32 @@
+name: pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        working-directory: ./krav-saas
+        run: |
+          npm i
+
+      - name: Build project
+        working-directory: ./krav-saas
+        env:
+          BASE_URL: /
+        run: npm run build
+
+      - name: Deploy to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./krav-saas/dist
