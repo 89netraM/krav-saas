@@ -1,11 +1,7 @@
 import "./index.css";
 
 function Spinner() {
-  return (
-    <div className="container">
-      <div className="ring" />
-    </div>
-  );
+  return <div className="ring" />;
 }
 
 export default Spinner;
