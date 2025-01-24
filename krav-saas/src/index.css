@@ -14,10 +14,6 @@
     color: #fff;
   }
 
-.clear-title {
-  margin-inline-start: calc(var(--spacing) * 4);
-}
-
 option {
   background: #111;
   color: #fff;

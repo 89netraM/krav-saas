@@ -28,14 +28,20 @@ export function setWallet(wallet: Wallet) {
   window.localStorage.setItem("wallet", JSON.stringify(wallet));
 }
 
-export function purchaseReroll() {
-  const wallet = getWallet();
+export async function purchaseReroll() {
+  const wallet = await getWallet();
   wallet.freeCredits -= 0.19;
   setWallet(wallet);
 }
 
-export function purchaseBoost() {
-  const wallet = getWallet();
-  wallet.realCredits -= 0.99;
+export async function purchaseBoost() {
+  const wallet = await getWallet();
+  wallet.freeCredits -= 0.99;
+  setWallet(wallet);
+}
+
+export async function purchaseTitle() {
+  const wallet = await getWallet();
+  wallet.freeCredits -= 1.99;
   setWallet(wallet);
 }
