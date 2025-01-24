@@ -8,6 +8,7 @@
   border: 2px solid #ff69b4;
   animation: glowingBorder 1.5s infinite;
   background-color: #111;
+  cursor: pointer;
 }
 
 @keyframes glowingBorder {

@@ -3,6 +3,7 @@ import Wallet from "./components/Wallet";
 import Dropdowns from "./components/Dropdowns";
 import "./index.css";
 import RequirementTitle from "./components/RequirementTitle";
+import { purchaseBoost, purchaseReroll } from "./api/wallet";
 
 function App() {
   const [priority, setPriority] = useState(0);
@@ -23,14 +24,20 @@ function App() {
         <p className="font-bold"> Priority : {priority} </p>
         <div className="flex flex gap-4 mt-4 ">
           <button
-            onClick={() => setPriority(Math.round(Math.random() * 10))}
+            onClick={() => {
+              purchaseReroll();
+              setPriority(Math.round(Math.random() * 10));
+            }}
             className="bg-green-400 text-white font-bold py-2 px-4 rounded hover:bg-green-500 transition duration-300"
           >
             {" "}
             Reroll (0.19$){" "}
           </button>
           <button
-            onClick={() => setPriority(priority + 1)}
+            onClick={() => {
+              purchaseBoost();
+              setPriority(priority + 1);
+            }}
             className="bg-red-400 text-white font-bold py-2 px-4 rounded hover:bg-green-500 transition duration-300"
           >
             {" "}

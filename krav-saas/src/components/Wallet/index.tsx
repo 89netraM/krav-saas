@@ -4,7 +4,7 @@ import Spinner from "../Spinner";
 import "./index.css";
 
 function Wallet() {
-  const [wallet, setWallet] = useState<Wallet | undefined>(undefined);
+  const [wallet, setWallet] = useState<Wallet>();
 
   useEffect(() => {
     getWallet().then(setWallet);
@@ -15,7 +15,14 @@ function Wallet() {
   }
 
   return (
-    <div className="wallet">
+    <div
+      className="wallet"
+      onClick={async () => {
+        setWallet(undefined);
+        const wallet = await getWallet();
+        setWallet(wallet);
+      }}
+    >
       Wallet
       <p>
         {wallet.freeCredits.toLocaleString("en-US", {
