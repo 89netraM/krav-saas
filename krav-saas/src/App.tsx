@@ -17,6 +17,13 @@ function App() {
 
   return (
     <>
+      <div className="flex flex-col justify-content-center items-center">
+        <img 
+          src="..\public\logo-big.png"
+          style={{height: 205, width: 200}}
+        />
+      </div>
+
       <div className="flex flex-col justify-content-center items-center h-100">
         <h1> Requirements SaaS </h1>
 
