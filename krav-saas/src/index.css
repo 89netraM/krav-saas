@@ -13,3 +13,7 @@
     background: #111;
     color: #fff;
   }
+
+.clear-title {
+  margin-inline-start: calc(var(--spacing) * 4);
+}
