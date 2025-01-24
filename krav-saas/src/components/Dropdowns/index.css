@@ -1,0 +1,12 @@
+select {
+  min-width: 5rem;
+
+  &:invalid {
+    border-color: red;
+  }
+}
+
+option {
+  background: #111;
+  color: #fff;
+}
