@@ -3,6 +3,7 @@ import Wallet from "./components/Wallet";
 import Dropdowns from "./components/Dropdowns";
 import "./index.css";
 import RequirementTitle from "./components/RequirementTitle";
+import PwaInstallButton from "./components/PwaInstallButton";
 
 function App() {
   const [priority, setPriority] = useState(0);
@@ -38,6 +39,8 @@ function App() {
           </button>
         </div>
       </div>
+
+      <PwaInstallButton />
     </>
   );
 }
